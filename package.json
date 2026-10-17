@@ -1,7 +1,7 @@
 {
   "name": "fastx402-mcp",
-  "version": "0.1.0",
-  "description": "MCP server for FastX402: 60+ pay-per-call tools for AI agents (QR codes, data conversion, dates, crypto and chain reads, web tools), paid per call in USDC with x402 on Base or Solana.",
+  "version": "0.1.1",
+  "description": "MCP server for FastX402: 80+ pay-per-call tools for AI agents (media, QR codes, data conversion, dates, crypto and chain reads, web tools), paid per call in USDC with x402 on Base or Solana.",
   "mcpName": "io.github.tusk80/fastx402",
   "type": "module",
   "bin": {
@@ -10,7 +10,9 @@
   "files": [
     "index.js",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "manifest.json",
+    "icon.png"
   ],
   "engines": {
     "node": ">=20"

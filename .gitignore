@@ -1,1 +1,4 @@
 node_modules/
+*.mcpb
+mcp-publisher.exe
+.mcpregistry_*

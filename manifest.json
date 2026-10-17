@@ -1,0 +1,65 @@
+{
+  "manifest_version": "0.3",
+  "name": "fastx402",
+  "display_name": "FastX402 tools",
+  "version": "0.1.1",
+  "description": "80+ pay-per-call tools for your agent (media, data, dates, crypto, web), paid per call in USDC via x402.",
+  "long_description": "FastX402 gives your AI agent 80+ small, fast tools: background removal, image to SVG, image and video conversion, text to speech, QR codes, YAML/XML/CSV/JSON conversion, Markdown to HTML, text diffs, date math, cron descriptions, time zones, colors, units, IP and DNS lookups, validators, hashing, JWT decoding, Ethereum/Base/Solana balances, token info, transaction status, gas, ENS and Basenames, web page text, screenshots, PDF text, OCR and transcription. There is no account and no API key: each successful call is paid automatically in USDC (Base or Solana) with the x402 protocol, from a wallet you choose. Use a dedicated wallet with a few dollars; the per-call and per-day limits below are a second safety net. The tool list is read live from https://fastx402.tools, so new tools appear on their own.",
+  "author": { "name": "FastX402", "email": "hello@fastx402.tools", "url": "https://fastx402.tools" },
+  "repository": { "type": "git", "url": "https://github.com/tusk80/fastx402-mcp" },
+  "homepage": "https://fastx402.tools",
+  "support": "https://github.com/tusk80/fastx402-mcp/issues",
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/index.js"],
+      "env": {
+        "FASTX402_EVM_PRIVATE_KEY": "${user_config.evm_private_key}",
+        "FASTX402_SOLANA_PRIVATE_KEY": "${user_config.solana_private_key}",
+        "FASTX402_MAX_USD_PER_CALL": "${user_config.max_usd_per_call}",
+        "FASTX402_MAX_USD_PER_DAY": "${user_config.max_usd_per_day}"
+      }
+    }
+  },
+  "tools_generated": true,
+  "keywords": ["x402", "tools", "media", "background removal", "qr code", "crypto", "base", "solana", "usdc", "micropayments"],
+  "license": "MIT",
+  "compatibility": { "platforms": ["darwin", "win32", "linux"], "runtimes": { "node": ">=20.0.0" } },
+  "user_config": {
+    "evm_private_key": {
+      "type": "string",
+      "title": "Base wallet private key (optional)",
+      "description": "0x + 64 hex. A NEW, dedicated wallet holding a few dollars of USDC on Base. Never your main wallet. Fill this or the Solana key.",
+      "sensitive": true,
+      "required": false
+    },
+    "solana_private_key": {
+      "type": "string",
+      "title": "Solana wallet private key (optional)",
+      "description": "Base58 secret key of a NEW, dedicated Solana wallet holding a few dollars of USDC.",
+      "sensitive": true,
+      "required": false
+    },
+    "max_usd_per_call": {
+      "type": "number",
+      "title": "Max USD per call",
+      "description": "Any single payment above this is refused.",
+      "default": 0.05,
+      "min": 0.001,
+      "max": 1,
+      "required": false
+    },
+    "max_usd_per_day": {
+      "type": "number",
+      "title": "Max USD per day",
+      "description": "Stops paying once this much was spent today.",
+      "default": 1,
+      "min": 0.01,
+      "max": 100,
+      "required": false
+    }
+  }
+}

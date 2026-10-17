@@ -3,12 +3,12 @@
   "name": "io.github.tusk80/fastx402",
   "description": "60+ pay-per-call tools for agents (data, dates, QR, crypto, web), paid in USDC via x402.",
   "repository": { "url": "https://github.com/tusk80/fastx402-mcp", "source": "github" },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "fastx402-mcp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "transport": { "type": "stdio" },
       "environmentVariables": [
         { "name": "FASTX402_EVM_PRIVATE_KEY", "description": "Dedicated wallet key that pays in USDC on Base (0x + 64 hex)", "isRequired": false, "isSecret": true, "format": "string" },

@@ -1,10 +1,14 @@
 # fastx402-mcp
 
-60+ small, fast tools for your AI agent, paid per call in USDC with [x402](https://x402.org). No account, no API key, no subscription: your agent pays a fraction of a cent per successful call, on Base or Solana.
+80+ small, fast tools for your AI agent, paid per call in USDC with [x402](https://x402.org). No account, no API key, no subscription: your agent pays a fraction of a cent per successful call, on Base or Solana.
 
-Tools include QR codes, YAML/XML/CSV/JSON conversion, Markdown to HTML, text diffs, date math and formatting, cron descriptions, time zones, color conversion, unit conversion, IP and DNS lookups, email/IBAN/ISBN validation, hashing and JWT decoding, Ethereum/Base/Solana balances, token info, transaction status, gas prices, ENS and Basename resolution, web page text, screenshots, PDF text, OCR and audio transcription. The list is read live from [fastx402.tools](https://fastx402.tools), so new tools appear without updating this package.
+Tools include background removal, image to SVG, image and video conversion, video to GIF, text to speech, QR codes, YAML/XML/CSV/JSON conversion, Markdown to HTML, text diffs, date math and formatting, cron descriptions, time zones, color conversion, unit conversion, IP and DNS lookups, email/IBAN/ISBN validation, hashing and JWT decoding, Ethereum/Base/Solana balances, token info, transaction status, gas prices, ENS and Basename resolution, web page text, screenshots, PDF text, OCR and audio transcription. The list is read live from [fastx402.tools](https://fastx402.tools), so new tools appear without updating this package.
 
 ## Quick start
+
+**Claude Desktop, one click:** download `fastx402.mcpb` from the [latest release](https://github.com/tusk80/fastx402-mcp/releases/latest), double-click it, and fill in the form (wallet key and limits). Done.
+
+**Any MCP client, by config:**
 
 Create a **new, dedicated wallet** and put a few dollars of USDC in it (on Base, or on Solana). Never use your main wallet.
 

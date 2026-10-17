@@ -14,7 +14,7 @@ import { ExactSvmScheme } from "@x402/svm/exact/client";
 import { createKeyPairSignerFromBytes, getBase58Encoder } from "@solana/kit";
 import { privateKeyToAccount } from "viem/accounts";
 
-const VERSION = "0.1.0";
+const VERSION = "0.1.1";
 const BASE = (process.env.FASTX402_URL || "https://fastx402.tools").replace(/\/$/, "");
 const MAX_PER_CALL = Number(process.env.FASTX402_MAX_USD_PER_CALL || 0.05);
 const MAX_PER_DAY = Number(process.env.FASTX402_MAX_USD_PER_DAY || 1);

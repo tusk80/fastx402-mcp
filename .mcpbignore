@@ -1,0 +1,6 @@
+.git/
+.gitignore
+server.json
+*.mcpb
+mcp-publisher.exe
+.mcpregistry_*
