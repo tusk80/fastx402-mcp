@@ -2,12 +2,30 @@
   "name": "fastx402-mcp",
   "version": "0.1.0",
   "description": "MCP server for FastX402: 60+ pay-per-call tools for AI agents (QR codes, data conversion, dates, crypto and chain reads, web tools), paid per call in USDC with x402 on Base or Solana.",
-  "mcpName": "io.github.GITHUB_USERNAME/fastx402",
+  "mcpName": "io.github.tusk80/fastx402",
   "type": "module",
-  "bin": { "fastx402-mcp": "index.js" },
-  "files": ["index.js", "README.md", "LICENSE"],
-  "engines": { "node": ">=20" },
-  "keywords": ["mcp", "model-context-protocol", "x402", "ai-agents", "tools", "usdc", "base", "solana", "micropayments"],
+  "bin": {
+    "fastx402-mcp": "index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "x402",
+    "ai-agents",
+    "tools",
+    "usdc",
+    "base",
+    "solana",
+    "micropayments"
+  ],
   "homepage": "https://fastx402.tools",
   "license": "MIT",
   "dependencies": {
@@ -17,5 +35,9 @@
     "@x402/fetch": "2.28.0",
     "@x402/svm": "2.28.0",
     "viem": "2.57.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tusk80/fastx402-mcp.git"
   }
 }
