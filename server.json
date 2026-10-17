@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.GITHUB_USERNAME/fastx402",
+  "description": "60+ pay-per-call tools for agents (data, dates, QR, crypto, web), paid in USDC via x402.",
+  "repository": { "url": "https://github.com/GITHUB_USERNAME/fastx402-mcp", "source": "github" },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "fastx402-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        { "name": "FASTX402_EVM_PRIVATE_KEY", "description": "Dedicated wallet key that pays in USDC on Base (0x + 64 hex)", "isRequired": false, "isSecret": true, "format": "string" },
+        { "name": "FASTX402_SOLANA_PRIVATE_KEY", "description": "Dedicated wallet key that pays in USDC on Solana (base58)", "isRequired": false, "isSecret": true, "format": "string" },
+        { "name": "FASTX402_MAX_USD_PER_CALL", "description": "Maximum USD per single payment (default 0.05)", "isRequired": false, "format": "string" },
+        { "name": "FASTX402_MAX_USD_PER_DAY", "description": "Maximum USD spent per day (default 1)", "isRequired": false, "format": "string" }
+      ]
+    }
+  ]
+}
